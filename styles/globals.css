@@ -17,11 +17,55 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: white;
+  background-color: black;
+  padding: 30px;
+}
+
+main {
+  width: 300px;
+  margin: 0 auto;
+}
+
+input button {
+  padding: 5px;
+  margin: 10px 0;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  margin: 10px 0;
+  color: black;
+}
+
+button {
+  padding: 5px 30px;
+  background-color: gray;
+  margin: 10px 0;
+}
+
+.captcha-image {
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+  align-items: center;
+}
+
+.captcha-image > div {
+  border: 1px solid red;
+}
+
+.captcha-image > div.selected {
+  position: relative;
+}
+
+.captcha-image > div.selected::after{
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.6);
 }
